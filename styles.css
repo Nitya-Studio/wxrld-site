@@ -109,8 +109,9 @@ footer{padding:55px 4vw 110px;border-top:1px solid #292929}
 @media(max-width:700px){.hero h1{font-size:13vw}}
 
 /* stable portfolio switching and image loading */
-.portfolio-reel{align-items:stretch}.reel-meta{height:100%;min-height:520px;display:grid;grid-template-rows:auto 1fr auto}.reel-copy{margin:0;align-self:center}.reel-copy h3{min-height:1.9em;display:flex;align-items:flex-end}.reel-copy p{min-height:4.8em}.reel-controls{align-self:end;margin-top:0}.reel-controls button{min-width:72px}.portfolio-reel .work-image img{opacity:1;transform:none}.portfolio-reel .work-image img.is-switching{opacity:.28;transform:scale(.992)}
+.portfolio-reel{align-items:stretch;grid-template-columns:minmax(0,1.15fr) minmax(340px,.85fr)}.reel-meta{height:100%;min-height:390px;display:grid;grid-template-rows:auto 1fr auto}.reel-copy{margin:0;align-self:center}.reel-copy h3{min-height:1.9em;display:flex;align-items:flex-end}.reel-copy p{min-height:4.8em}.reel-controls{align-self:end;margin-top:0}.reel-controls button{min-width:72px}.portfolio-reel .work-image img{opacity:1;transform:none}.portfolio-reel .work-image img.is-switching{opacity:.28;transform:scale(.992)}
 .archive-category-grid .archive-item{background:#070707}.archive-category-grid .archive-item:before{content:"";position:absolute;inset:0 0 48px;background:linear-gradient(100deg,#080808 20%,#171717 38%,#080808 58%);background-size:220% 100%;opacity:0;pointer-events:none}.archive-category-grid .archive-item.is-loading:before{opacity:1;animation:archiveLoad 1.35s linear infinite}.archive-category-grid .archive-item.is-loading img{opacity:0}.archive-category-grid .archive-item img{transition:opacity .25s,transform .65s,filter .45s}
 @keyframes archiveLoad{to{background-position:-220% 0}}
-@media(max-width:900px){.reel-meta{min-height:380px}.reel-copy h3{min-height:1.8em}.reel-copy p{min-height:4.8em}}
+@media(max-width:1050px){.portfolio-reel{grid-template-columns:1fr}}
+@media(max-width:900px){.reel-meta{min-height:360px}.reel-copy h3{min-height:1.8em}.reel-copy p{min-height:4.8em}}
 @media(max-width:600px){.reel-meta{min-height:350px}.reel-copy h3{min-height:2.1em}.reel-copy p{min-height:6.2em}}
