@@ -2,8 +2,6 @@
 
 Upload portfolio images into `banners`, `branding`, `logos`, `social-media`, or `other`. The public site reads those GitHub folders automatically. Use clear filenames because the filename becomes the displayed project title.
 
-To add a review, edit `reviews/reviews.json`, copy an existing review object, change `author`, `service`, `rating`, and `message`, then commit. Keep a comma between objects.
-
 Connect the site by setting `owner` and `repo` in `portfolio-config.js`. Use a public repository; never place a GitHub password or token in frontend files.
 
 ## Local radio

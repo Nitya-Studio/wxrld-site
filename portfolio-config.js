@@ -1,1 +1,1 @@
-window.WXRLDZ_PORTFOLIO={owner:"Nitya-Studio",repo:"Wrldx-Work",branch:"main",localManifest:"portfolio/manifest.json",reviewsPath:"portfolio/reviews/reviews.json",localReviews:"portfolio/reviews/reviews.json"};
+window.WXRLDZ_PORTFOLIO={owner:"Nitya-Studio",repo:"Wrldx-Work",branch:"main",localManifest:"portfolio/manifest.json"};
