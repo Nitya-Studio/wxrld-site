@@ -107,18 +107,13 @@ body.entry-locked{overflow:hidden}
 /* Hero orbit depth and blue brand tiles */
 .nav-brand>.nav-logo,
 .entry-logo{background:linear-gradient(145deg,#4f8cff,#1651d4);box-shadow:inset 0 1px rgba(255,255,255,.42),0 18px 42px rgba(39,103,245,.24)}
-.orbit-runner{position:absolute;left:50%;top:50%;pointer-events:none;will-change:z-index;animation:orbit-depth 12s linear infinite!important}
-.runner-one{width:100%;height:62%;transform:translate(-50%,-50%) rotate(-12deg);animation-duration:12s!important;animation-delay:-1.5s!important}
-.runner-two{width:72%;height:86%;transform:translate(-50%,-50%) rotate(37deg);animation-duration:17s!important;animation-delay:-9s!important}
+.orbit-runner{position:absolute;z-index:1;left:50%;top:50%;pointer-events:none}
+.runner-one{width:100%;height:62%;transform:translate(-50%,-50%) rotate(-12deg)}
+.runner-two{width:72%;height:86%;transform:translate(-50%,-50%) rotate(37deg)}
 .orbit-runner .stage-dot{left:0;top:0;right:auto;offset-path:ellipse(50% 50% at 50% 50%);offset-anchor:center;offset-rotate:0deg;will-change:offset-distance;animation:ring-travel 12s linear infinite!important}
-.runner-one .stage-dot{animation-duration:12s!important;animation-delay:-1.5s!important}
-.runner-two .stage-dot{animation-duration:17s!important;animation-delay:-9s!important}
+.runner-one .stage-dot{animation-duration:20s!important;animation-delay:-2.5s!important}
+.runner-two .stage-dot{animation-duration:15s!important;animation-delay:-7s!important}
 @keyframes ring-travel{to{offset-distance:100%}}
-@keyframes orbit-depth{
-  0%,49.8%{z-index:4}
-  50%,99.8%{z-index:1}
-  100%{z-index:4}
-}
 
 /* Compact site footer */
 footer{padding:28px 5vw;grid-template-columns:auto minmax(180px,1fr) auto auto;gap:24px}
