@@ -147,8 +147,13 @@ audio.addEventListener('loadedmetadata',()=>{$('#music-duration').textContent=fo
 audio.addEventListener('timeupdate',()=>{if(!audio.duration)return;seek.value=String(audio.currentTime/audio.duration*100);$('#music-current').textContent=formatTime(audio.currentTime)});
 seek.addEventListener('input',()=>{if(audio.duration)audio.currentTime=Number(seek.value)/100*audio.duration});
 selectTrack(0,false,false);
-document.addEventListener('pointerdown',event=>{
-  if(event.target.closest('#music-play,.music-track'))return;
-  if(audio.paused)selectTrack(trackIndex,true);
-},{once:true,capture:true});
+const entryScreen=$('#entry-screen'),entryEnter=$('#entry-enter');
+function enterSite(){
+  if(entryScreen.classList.contains('leaving'))return;
+  entryEnter.blur();entryEnter.disabled=true;entryScreen.classList.add('leaving');entryScreen.setAttribute('aria-hidden','true');
+  document.body.classList.remove('entry-locked');
+  if(!audio.getAttribute('src'))selectTrack(trackIndex,true);else audio.play().catch(()=>{});
+  window.setTimeout(()=>entryScreen.remove(),750);
+}
+entryEnter.addEventListener('click',enterSite);
 document.addEventListener('keydown',event=>{if(event.key!=='Escape')return;if(viewer.open)viewer.close();else if(portfolioDialog.open)closePortfolio()});
