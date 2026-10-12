@@ -103,3 +103,19 @@ body.entry-locked{overflow:hidden}
 .entry-content>small{margin-top:15px;color:#71819a;font:500 7px var(--mono);letter-spacing:.14em}
 @media(max-width:600px){.entry-logo{width:78px;height:78px;border-radius:24px}.entry-content h1{font-size:15vw}.entry-content>span{font-size:8px}.entry-orbit-one{width:110vw;height:62vw}.entry-orbit-two{width:80vw;height:112vw}}
 @media(prefers-reduced-motion:reduce){.entry-screen,.entry-content{transition-duration:.01ms}}
+
+/* Hero orbit depth and blue brand tiles */
+.nav-brand>.nav-logo,
+.entry-logo{background:linear-gradient(145deg,#4f8cff,#1651d4);box-shadow:inset 0 1px rgba(255,255,255,.42),0 18px 42px rgba(39,103,245,.24)}
+.stage-dot{left:50%;top:50%;right:auto;z-index:4;will-change:left,top,transform,opacity;animation:phone-orbit 10s linear infinite}
+.dot-one{left:50%;top:50%;right:auto;animation-duration:10s;animation-delay:-1.4s}
+.dot-two{left:50%;top:50%;right:auto;animation-duration:14s;animation-delay:-8s}
+@keyframes phone-orbit{
+  0%{left:7%;top:54%;z-index:4;opacity:1;transform:translate(-50%,-50%) scale(1)}
+  24%{left:50%;top:88%;z-index:4;opacity:1;transform:translate(-50%,-50%) scale(1.12)}
+  49%{left:93%;top:54%;z-index:4;opacity:1;transform:translate(-50%,-50%) scale(1)}
+  50%{left:93%;top:54%;z-index:1;opacity:.72;transform:translate(-50%,-50%) scale(.78)}
+  74%{left:50%;top:15%;z-index:1;opacity:.58;transform:translate(-50%,-50%) scale(.68)}
+  99%{left:7%;top:54%;z-index:1;opacity:.72;transform:translate(-50%,-50%) scale(.78)}
+  100%{left:7%;top:54%;z-index:4;opacity:1;transform:translate(-50%,-50%) scale(1)}
+}
